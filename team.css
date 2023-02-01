@@ -1,4 +1,4 @@
-body{
+  body{
     margin:0;
     text-align:center;
     font-family: Verdana;
@@ -61,13 +61,13 @@ body{
 
   /* Full Team Filter */
   input[type="radio"][id="UH"]:checked + label {
-    background:#FFA373;
+    background:#45C2DD;
     color: white;
   }
 
   /* Team Lead Filter */
   input[type="radio"][id="TL"]:checked + label {
-    background:#45C2DD;
+    background:#FFA373;
     color: white;
   }
   input[type="radio"][id="TL"]:checked ~ .HX,
@@ -84,7 +84,7 @@ body{
 
   /* HX Filter */
   input[type="radio"][id="HX"]:checked + label {
-    background:#FFA373;
+    background:#45C2DD;
     color: white;
   }
   input[type="radio"][id="HX"]:checked ~ .TL,
@@ -101,7 +101,7 @@ body{
 
   /* Marketing Filter */
   input[type="radio"][id="Marketing"]:checked + label {
-    background:#45C2DD;
+    background:#FFA373;
     color: white;
   }
   input[type="radio"][id="Marketing"]:checked ~ .TL,
@@ -118,7 +118,7 @@ body{
 
   /* Sponsorship Filter */
   input[type="radio"][id="Sponsorship"]:checked + label {
-    background:#FFA373;
+    background:#45C2DD;
     color: white;
   }
   input[type="radio"][id="Sponsorship"]:checked ~ .TL,
@@ -135,7 +135,7 @@ body{
 
   /* Design Filter */
   input[type="radio"][id="Design"]:checked + label {
-    background:#45C2DD;
+    background:#FFA373;
     color: white;
   }
   input[type="radio"][id="Design"]:checked ~ .TL,
@@ -152,7 +152,7 @@ body{
 
   /* Tech Filter */
   input[type="radio"][id="Tech"]:checked + label {
-    background:#FFA373;
+    background:#45C2DD;
     color: white;
   }
   input[type="radio"][id="Tech"]:checked ~ .TL,
@@ -185,3 +185,25 @@ body{
     height: 150px;
     width: 100px;
   }
+
+/********************************************************************************************/
+/* Special styling for smaller screens only */
+
+@media all and (max-width: 768px) {
+  .tile {
+    width: 31%;
+    height: auto;
+    float:left;
+    transition:all 1s;
+    margin:0.5%;
+    padding:0.5%;
+    text-align:center;
+    background-color: white;
+    margin-bottom: 1%;
+  }
+
+  .space {
+    height: 100px;
+    width: 100px;
+  }
+}
