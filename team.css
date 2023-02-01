@@ -1,13 +1,46 @@
   body{
     margin:0;
     text-align:center;
-    font-family: Verdana;
+    font-family: Montserrat, sans-serif;
     background:#a37cee;
   }
 
   h1 {
     text-align:center;
   }
+
+  p {
+    color: #a37cee;
+    margin: 0%;
+  }
+
+  p:hover {
+    color: black
+  }
+
+  a {
+    text-decoration: none;
+    color: #a37cee;
+  }
+
+  /* Coloring the link hover features */
+  .blue:hover {
+    background-color: #45C2DD;
+    color: white;
+    border-radius: 2rem;
+  } 
+
+  .orange:hover {
+    background-color: #FFA373;
+    color: white;
+    border-radius: 2rem;
+  } 
+  
+  .green:hover {
+    background-color: #89CB58;
+    color: white;
+    border-radius: 2rem;
+  } 
 
   /* Inside the body */
   .container {
@@ -19,7 +52,7 @@
     position: relative;
   }
 
-  /* defining the images that will not have hover features*/
+  /* defining the images that will not have hover features */
   .img_not_hover {
     position: absolute;
     top: 0px;
@@ -47,28 +80,35 @@
   }
 
   label {
-    width:23%;
+    width:21%;
     float:left;
     text-align:center;
     background:#ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     color:#222222;
     padding:0.5%;
-    margin:0.5%;
+    margin:1.5%;
     margin-bottom:30px;
     cursor:pointer;
+    border-radius: 2rem;
+  }
+
+  label:hover { 
+      transform: scale(1.1);
   }
 
   /* Full Team Filter */
   input[type="radio"][id="UH"]:checked + label {
     background:#45C2DD;
     color: white;
+    border-radius: 2rem;
   }
 
   /* Team Lead Filter */
   input[type="radio"][id="TL"]:checked + label {
     background:#FFA373;
     color: white;
+    border-radius: 2rem;
   }
   input[type="radio"][id="TL"]:checked ~ .HX,
   input[type="radio"][id="TL"]:checked ~ .Marketing,
@@ -84,8 +124,9 @@
 
   /* HX Filter */
   input[type="radio"][id="HX"]:checked + label {
-    background:#45C2DD;
+    background:#89CB58;
     color: white;
+    border-radius: 2rem;
   }
   input[type="radio"][id="HX"]:checked ~ .TL,
   input[type="radio"][id="HX"]:checked ~ .Marketing,
@@ -101,8 +142,9 @@
 
   /* Marketing Filter */
   input[type="radio"][id="Marketing"]:checked + label {
-    background:#FFA373;
+    background:#45C2DD;
     color: white;
+    border-radius: 2rem;
   }
   input[type="radio"][id="Marketing"]:checked ~ .TL,
   input[type="radio"][id="Marketing"]:checked ~ .HX,
@@ -118,8 +160,9 @@
 
   /* Sponsorship Filter */
   input[type="radio"][id="Sponsorship"]:checked + label {
-    background:#45C2DD;
+    background:#FFA373;
     color: white;
+    border-radius: 2rem;
   }
   input[type="radio"][id="Sponsorship"]:checked ~ .TL,
   input[type="radio"][id="Sponsorship"]:checked ~ .HX,
@@ -135,8 +178,9 @@
 
   /* Design Filter */
   input[type="radio"][id="Design"]:checked + label {
-    background:#FFA373;
+    background:#89CB58;
     color: white;
+    border-radius: 2rem;
   }
   input[type="radio"][id="Design"]:checked ~ .TL,
   input[type="radio"][id="Design"]:checked ~ .HX,
@@ -154,6 +198,7 @@
   input[type="radio"][id="Tech"]:checked + label {
     background:#45C2DD;
     color: white;
+    border-radius: 2rem;
   }
   input[type="radio"][id="Tech"]:checked ~ .TL,
   input[type="radio"][id="Tech"]:checked ~ .HX,
@@ -182,9 +227,19 @@
 
   /* Easiest way to create space between the filter buttons and images */
   .space {
+    height: 200px;
+    width: 100px;
+  }
+
+/********************************************************************************************/
+/* Special styling for mid sized screens */
+
+@media all and (min-width: 768px) and (max-width: 1150px) {
+  .space {
     height: 150px;
     width: 100px;
   }
+}
 
 /********************************************************************************************/
 /* Special styling for smaller screens only */
