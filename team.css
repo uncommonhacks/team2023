@@ -2,18 +2,50 @@ body{
     margin:0;
     text-align:center;
     font-family: Verdana;
-    background:#f5f5f5;
+    background:#a37cee;
   }
+
   h1 {
     text-align:center;
   }
+
+  /* Inside the body */
   .container {
     width:90%;
     margin:0 auto;
   }
+
+  .img_container {
+    position: relative;
+  }
+
+  /* defining the images that will not have hover features*/
+  .img_not_hover {
+    position: absolute;
+    top: 0px;
+    left: 2.5%;
+    margin-top: 5%;
+    width: 95%;
+    object-fit:cover;
+  }
+
+  /* defining the images that will have hover features*/
+  .img_hover {
+    position: relative;
+    margin-top: 5%;
+    width: 95%;
+    transition: opacity .5s ease-in;
+  }
+
+  .img_hover:hover {
+    opacity: 0%;
+    transition: opacity .3s ease-out;
+  }
+
   input[type="radio"] {
       display:none;
   }
+
   label {
     width:23%;
     float:left;
@@ -27,9 +59,16 @@ body{
     cursor:pointer;
   }
 
+  /* Full Team Filter */
+  input[type="radio"][id="UH"]:checked + label {
+    background:#FFA373;
+    color: white;
+  }
+
   /* Team Lead Filter */
   input[type="radio"][id="TL"]:checked + label {
-    background:#6666ff;
+    background:#45C2DD;
+    color: white;
   }
   input[type="radio"][id="TL"]:checked ~ .HX,
   input[type="radio"][id="TL"]:checked ~ .Marketing,
@@ -45,7 +84,8 @@ body{
 
   /* HX Filter */
   input[type="radio"][id="HX"]:checked + label {
-    background:#6666ff;
+    background:#FFA373;
+    color: white;
   }
   input[type="radio"][id="HX"]:checked ~ .TL,
   input[type="radio"][id="HX"]:checked ~ .Marketing,
@@ -61,7 +101,8 @@ body{
 
   /* Marketing Filter */
   input[type="radio"][id="Marketing"]:checked + label {
-    background:#6666ff;
+    background:#45C2DD;
+    color: white;
   }
   input[type="radio"][id="Marketing"]:checked ~ .TL,
   input[type="radio"][id="Marketing"]:checked ~ .HX,
@@ -77,7 +118,8 @@ body{
 
   /* Sponsorship Filter */
   input[type="radio"][id="Sponsorship"]:checked + label {
-    background:#6666ff;
+    background:#FFA373;
+    color: white;
   }
   input[type="radio"][id="Sponsorship"]:checked ~ .TL,
   input[type="radio"][id="Sponsorship"]:checked ~ .HX,
@@ -93,7 +135,8 @@ body{
 
   /* Design Filter */
   input[type="radio"][id="Design"]:checked + label {
-    background:#6666ff;
+    background:#45C2DD;
+    color: white;
   }
   input[type="radio"][id="Design"]:checked ~ .TL,
   input[type="radio"][id="Design"]:checked ~ .HX,
@@ -108,8 +151,9 @@ body{
   }
 
   /* Tech Filter */
-  input[type="radio"][id="Design"]:checked + label {
-    background:#6666ff;
+  input[type="radio"][id="Tech"]:checked + label {
+    background:#FFA373;
+    color: white;
   }
   input[type="radio"][id="Tech"]:checked ~ .TL,
   input[type="radio"][id="Tech"]:checked ~ .HX,
@@ -123,20 +167,21 @@ body{
     opacity:0;
   }
   
+  /* Each square that holds the photos and the text */
   .tile {
-    width:23%;
-    height:100px;
+    width: 23%;
+    height: auto;
     float:left;
     transition:all 1s;
     margin:0.5%;
     padding:0.5%;
+    text-align:center;
+    background-color: white;
+    margin-bottom: 1%;
   }
-  .green {
-    background:#66dd99;
-  }
-  .blue {
-    background:#6666ff;
-  }
-  .red {
-    background:#ff4466;
+
+  /* Easiest way to create space between the filter buttons and images */
+  .space {
+    height: 150px;
+    width: 100px;
   }
