@@ -375,7 +375,7 @@ a.dropdown-item:hover {
 
 @media all and (min-width: 768px) and (max-width: 1150px) {
   .space {
-    height: 150px;
+    height: 175px;
     width: 100px;
   }
 }
