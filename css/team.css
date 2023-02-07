@@ -19,11 +19,6 @@
     background:#a37cee;
   }
 
-  h1 {
-    text-align:center;
-    margin-top: 75px;
-  }
-
   p {
     color: #a37cee;
     margin: 0%;
@@ -61,6 +56,7 @@
   .container {
     width:90%;
     margin:0 auto;
+    margin-top: 75px;
   }
 
   .img_container {
@@ -405,7 +401,7 @@ a.dropdown-item:hover {
     height: 10%;
   }
 
-  h1 {
+  container {
     margin-top: 100px;
   }
 }
